@@ -13,29 +13,22 @@ import { Switch, Route } from "react-router-dom";
 // Helper
 import { logout } from "../../helpers/Auth";
 // * styles
-import { Layout, Row, Col } from "antd";
-import { ThemeProvider } from 'react-jss'
-import theme from '../theme/v1'
+import { ThemeProvider } from "react-jss";
+import theme from "../theme/v1";
 
 const AppRouter = () => {
   return (
-    <App>
-      <ThemeProvider theme={theme}>
-      <Row>
-        <Col span={4}>
+    <ThemeProvider theme={theme}>
+      <App>
           <Header />
-        </Col>
-        <Col span={20}>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/login" component={Login} exact />
             <Route component={Error404} />
           </Switch>
-        </Col>
-      </Row>
-      </ThemeProvider>
-    </App>
-  );
-};
+      </App>
+    </ThemeProvider>
+  )
+}
 
 export default AppRouter;
