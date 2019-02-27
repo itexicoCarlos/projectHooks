@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Error404 = () => {
+const About = () => {
   return(
     <div>
-      Error 404
+      About
     </div>
   )
 }
 
-export default Error404
+export default About

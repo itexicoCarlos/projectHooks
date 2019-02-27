@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Error404 = () => {
+const Projects = () => {
   return(
     <div>
-      Error 404
+      Projects
     </div>
   )
 }
 
-export default Error404
+export default Projects
