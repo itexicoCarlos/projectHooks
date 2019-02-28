@@ -2,6 +2,7 @@ import React from "react";
 import App from "../../components/App";
 // Components
 import Error404 from "../components/Erro404";
+import Footer from '../components/Footer'
 import Header from "../components/Header";
 import Login from "../../components/Login";
 import About from "../../components/About";
@@ -24,8 +25,10 @@ const AppRouter = () => {
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/login" component={Login} exact />
+            <Route path="/about" component={About} exact />
             <Route component={Error404} />
           </Switch>
+          <Footer/>
       </App>
     </ThemeProvider>
   )
