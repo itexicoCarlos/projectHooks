@@ -1,12 +1,14 @@
 import React from 'react'
+// Styles
+import injectSheet from 'react-jss'
+import styles from './homeStyles'
 
-const Home = () => {
-  
+const Home = ({classes}) => {
   return(
-    <div>
+    <div className={classes.position}>
       Home
     </div>
   )
 }
-
-export default Home 
+const appWithStyles = injectSheet(styles)(Home)
+export default appWithStyles 

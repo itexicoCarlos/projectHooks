@@ -13,14 +13,14 @@ import { Switch, Route } from "react-router-dom";
 // Helper
 import { logout } from "../../helpers/Auth";
 // * styles
-import { ThemeProvider } from "react-jss";
+import { ThemeProvider} from "react-jss";
 import theme from "../theme/v1";
 
 const AppRouter = () => {
   return (
     <ThemeProvider theme={theme}>
       <App>
-          <Header />
+        <Header/>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/login" component={Login} exact />
@@ -30,5 +30,4 @@ const AppRouter = () => {
     </ThemeProvider>
   )
 }
-
 export default AppRouter;
