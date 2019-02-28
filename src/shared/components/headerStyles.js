@@ -10,10 +10,6 @@ const styles = ({
   },
   ulHeader: {
     display: 'flex',
-  },
-  imgHeader: {
-    width: '50%',
-    height: '100%'
   }
 })
 

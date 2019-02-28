@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 // Routes
 import { NavLink as Link } from 'react-router-dom'
 // Styles
 import injectSheet from 'react-jss'
 import styles from './headerStyles'
-import react from '../media/react.png'
+import react from '../media/react2.svg'
 
 const Header = ({classes}) => {
 
   return (
     <header className={classes.position}>
     <picture>
+      <source srcset={''}/>
       <img className={classes.imgHeader} src={react} alt="Soy una imagen"/>
     </picture>
     <span/>
