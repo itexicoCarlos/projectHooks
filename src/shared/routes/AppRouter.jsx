@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react";
-import App from "../../components/App";
+import React, { useState, useEffect, Suspense } from "react";
 // Components
 import Error404 from "../components/Erro404";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Login from "../../components/Login";
 import About from "../../components/About";
@@ -14,43 +13,33 @@ import { Switch, Route } from "react-router-dom";
 // Helper y Auxiliares
 import { logout } from "../../helpers/Auth";
 // Redux
-import { connect } from 'react-redux'
-import { Provider } from 'react-redux'
-import store from '../redux/configureStore'
+import { connect } from "react-redux";
+import { Provider } from "react-redux";
+import store from "../redux/configureStore";
 // * styles
-import { ThemeProvider} from "react-jss";
+import { ThemeProvider } from "react-jss";
 import theme from "../theme/v1";
 
 const AppRouter = () => {
-  const [loading, setLoading] = useState(true)
+  const App = React.lazy(() => import("../../components/App"));
 
-  return loading  === false
-    ? (
-      <Provider store={store({authed: false})}>
-        <ThemeProvider theme={theme}>
+  return (
+    <Provider store={store({ authed: false })}>
+      <ThemeProvider theme={theme}>
+        <Suspense fallback={<div>Loading...</div>}>
           <App>
-            <main>
-              <h1>Loading..</h1>
-            </main>
+            <Header />
+            <Switch>
+              <Route path="/" component={Home} exact />
+              <Route path="/login" component={Login} exact />
+              <Route path="/about" component={About} exact />
+              <Route component={Error404} />
+            </Switch>
+            <Footer />
           </App>
-        </ThemeProvider>
-      </Provider>
-      )
-    : (
-      <Provider store={store({authed: false})}>
-        <ThemeProvider theme={theme}>
-          <App>
-            <Header/>
-              <Switch>
-                <Route path="/" component={Home} exact />
-                <Route path="/login" component={Login} exact />
-                <Route path="/about" component={About} exact />
-                <Route component={Error404} />
-              </Switch>
-              <Footer/>
-          </App>
-        </ThemeProvider>
-      </Provider>
-    )
-}
-export default AppRouter
+        </Suspense>
+      </ThemeProvider>
+    </Provider>
+  );
+};
+export default AppRouter;
