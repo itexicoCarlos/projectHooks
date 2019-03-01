@@ -15,35 +15,42 @@ import { Switch, Route } from "react-router-dom";
 import { logout } from "../../helpers/Auth";
 // Redux
 import { connect } from 'react-redux'
+import { Provider } from 'react-redux'
+import store from '../redux/configureStore'
 // * styles
 import { ThemeProvider} from "react-jss";
 import theme from "../theme/v1";
 
-const AppRouter = ({loading, authed}) => {
+const AppRouter = () => {
+  const [loading, setLoading] = useState(true)
 
   return loading  === false
     ? (
-      <ThemeProvider theme={theme}>
-        <App>
-          <main>
-            <h1>Loading..</h1>
-          </main>
-        </App>
-      </ThemeProvider>
+      <Provider store={store({authed: false})}>
+        <ThemeProvider theme={theme}>
+          <App>
+            <main>
+              <h1>Loading..</h1>
+            </main>
+          </App>
+        </ThemeProvider>
+      </Provider>
       )
     : (
-      <ThemeProvider theme={theme}>
-        <App>
-          <Header/>
-            <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/login" component={Login} exact />
-              <Route path="/about" component={About} exact />
-              <Route component={Error404} />
-            </Switch>
-            <Footer/>
-        </App>
-      </ThemeProvider>
+      <Provider store={store({authed: false})}>
+        <ThemeProvider theme={theme}>
+          <App>
+            <Header/>
+              <Switch>
+                <Route path="/" component={Home} exact />
+                <Route path="/login" component={Login} exact />
+                <Route path="/about" component={About} exact />
+                <Route component={Error404} />
+              </Switch>
+              <Footer/>
+          </App>
+        </ThemeProvider>
+      </Provider>
     )
 }
-export default connect(state => state)(AppRouter)
+export default AppRouter

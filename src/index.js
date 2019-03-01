@@ -5,16 +5,11 @@ import AppRouter from './shared/routes/AppRouter';
 import * as serviceWorker from './serviceWorker';
 // Routes
 import { BrowserRouter as Router } from 'react-router-dom'
-// Redux 
-import { Provider } from 'react-redux'
-import store from './shared/redux/configureStore'
 
 render(
-  <Provider store={store({authed: false, loading: true})}>
-    <Router>
-      <AppRouter />
-    </Router>
-  </Provider>
+  <Router>
+    <AppRouter />
+  </Router>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
