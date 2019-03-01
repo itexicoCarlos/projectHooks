@@ -23,10 +23,16 @@ const AppRouter = () => {
   const [authed, setAuthed] =  useState(false)
   const [loading, setLoading] = useState(false)
 
-  useEffect()
-
   return loading  === false
-    ? <h1>Loading....</h1>
+    ? (
+      <ThemeProvider theme={theme}>
+        <App>
+          <main>
+            <h1>Loading..</h1>
+          </main>
+        </App>
+      </ThemeProvider>
+      )
     : (
       <ThemeProvider theme={theme}>
         <App>
