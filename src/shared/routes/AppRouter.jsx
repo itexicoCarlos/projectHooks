@@ -21,7 +21,7 @@ const AppRouter = () => {
 
   // ! State
   const [authed, setAuthed] =  useState(false)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   return loading  === false
     ? (
