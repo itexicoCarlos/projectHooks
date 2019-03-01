@@ -13,15 +13,13 @@ import Projects from "../../components/private/Projects";
 import { Switch, Route } from "react-router-dom";
 // Helper y Auxiliares
 import { logout } from "../../helpers/Auth";
+// Redux
+import { connect } from 'react-redux'
 // * styles
 import { ThemeProvider} from "react-jss";
 import theme from "../theme/v1";
 
-const AppRouter = () => {
-
-  // ! State
-  const [authed, setAuthed] =  useState(false)
-  const [loading, setLoading] = useState(true)
+const AppRouter = ({loading, authed}) => {
 
   return loading  === false
     ? (
@@ -48,4 +46,4 @@ const AppRouter = () => {
       </ThemeProvider>
     )
 }
-export default AppRouter;
+export default connect(state => state)(AppRouter)
