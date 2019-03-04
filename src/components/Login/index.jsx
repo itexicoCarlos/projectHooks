@@ -4,7 +4,7 @@ import { login } from '../../helpers/Auth'
 // Styles
 import injectSheet from 'react-jss'
 import styles from './loginStyles'
-
+import { SpeechBubble } from 'react-kawaii'
 
 const Login = ({classes}) => {
 
@@ -22,7 +22,7 @@ const Login = ({classes}) => {
 
   return(
     <div className={classes.loginContainer}>
-      <h1>Seccion Login</h1>
+      <SpeechBubble size={150} mood="happy" color="#83D1FB" />
       <form className={classes.formContainer} onSubmit={handleOnSubmit}>
         <input type="email" placeholder='Email' ref={refEmail}/> 
         <input type="password" placeholder='Password' ref={ refPassword}/>

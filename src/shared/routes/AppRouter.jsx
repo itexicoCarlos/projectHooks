@@ -29,10 +29,10 @@ const AppRouter = () => {
           <App>
             <Header />
             <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/login" component={Login} exact />
-              <Route path="/about" component={About} exact />
-              <Route component={Error404} />
+              <Route path="/" render={() => <Home/>} exact />
+              <Route path="/login" render={() => <Login/>} exact />
+              <Route path="/about" render={() => <About/>} exact />
+              <Route render={() => <Error404/>} />
             </Switch>
             <Footer />
           </App>

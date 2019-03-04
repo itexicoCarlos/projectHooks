@@ -7,7 +7,7 @@ const Footer = ({classes}) => {
 
   return(
     <div className={classes.containerFooter}>
-      <p>footer@kikisvv</p>
+      <p>The world is full of people who do the same as you...</p>
     </div>
   )
 }

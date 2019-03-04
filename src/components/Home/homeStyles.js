@@ -11,6 +11,14 @@ const styles = ({
       height: '100%',
       width: '100%'
     }
+  },
+  titleHome: {
+    color: 'white',
+    fontSize: '4vmax',
+    position: 'absolute',
+    top: '47%',
+    left: '4%',
+    borderBottom: '1px solid #fff'
   }
 })
 
