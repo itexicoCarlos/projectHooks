@@ -18,11 +18,20 @@ const styles = ({
     '& input': {
       margin: '1em',
       padding: '1em',
-      width: '50%'
+      width: '50%',
+      border: 'none',
+      borderBottom: '1px solid black',
+      '&:focus': {
+        outline: '3px solid lightblue'
+      }
     }
   },
   buttonFormContainer: {
     padding: '1em',
+    borderRadius: '10px',
+    '&:focus':{
+      outline: 'none'
+    }
   }
 })
 

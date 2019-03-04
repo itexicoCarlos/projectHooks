@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "firebase": "^5.8.4",
+    "popmotion": "^8.6.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-jss": "^8.6.1",
