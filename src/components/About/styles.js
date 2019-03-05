@@ -35,7 +35,7 @@ const styles = ({
   projectsContainer: {
     width: '100%',
     height: '100%',
-    backgroundColor: 'silver'
+    backgroundColor: 'silver',
   }
 })
 export default styles

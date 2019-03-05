@@ -1,7 +1,7 @@
 const styles = ({
   position: {
     gridArea: '2 / 1 / 4 / 4 ',
-    backgroundColor: 'black'
+    backgroundColor: 'black',
   },
   homeContainer: { 
     width: '100%',
@@ -9,7 +9,7 @@ const styles = ({
     backgroundColor: 'black',
     '& > div':{
       height: '100%',
-      width: '100%'
+      width: '100%',
     }
   },
   titleHome: {
@@ -18,7 +18,7 @@ const styles = ({
     position: 'absolute',
     top: '47%',
     left: '4%',
-    borderBottom: '1px solid #fff'
+    borderBottom: '1px solid #fff',
   }
 })
 
