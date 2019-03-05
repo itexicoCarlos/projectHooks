@@ -14,7 +14,7 @@ const About = ({classes}) => {
         </div>
         <div className={classes.projectsPosition}>
           <div className={classes.projectsContainer}>
-
+              
           </div>
         </div>
       </section>
