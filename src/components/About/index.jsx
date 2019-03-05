@@ -2,14 +2,20 @@ import React from 'react'
 // styles
 import styles from './styles'
 import injectSheet from 'react-jss'
+import Avatar from 'react-avatar'
 
 const About = ({classes}) => {
   return(
     <div className={classes.position}>
       <section className={classes.aboutContainer}>
         <div className={classes.aboutMe}> 
-          <img src="https://img.peru21.pe/files/ec_article_multimedia_gallery/uploads/2019/03/04/5c7d3e0a9f3b8.jpeg" alt="Heee Heee"/>
-          <p>Heeee Heeee</p>
+        <Avatar twitterHandle='@kikisvv' name="Carlos Vera" size="150" round='200px' color='lightblue'/>
+          <p>Hello!</p>
+        </div>
+        <div className={classes.projectsPosition}>
+          <div className={classes.projectsContainer}>
+              
+          </div>
         </div>
       </section>
     </div>

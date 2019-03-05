@@ -8,13 +8,13 @@ const styles = ({
     width: '100%',
     height: '100%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: 'repeat(6, 1fr)',
     gridTemplateRows: 'repeat(2, 1fr)',
   },
   aboutMe: {
     grid: {
       row: '1/3',
-      column: '1/2'
+      column: '1/3'
     },
     display: 'flex',
     flexFlow: 'column wrap',
@@ -25,6 +25,17 @@ const styles = ({
     '& > p': {
       color: 'white'
     }
+  },
+  projectsPosition: {
+    grid: {
+      row: '1/3',
+      column: '3/7'
+    }
+  },
+  projectsContainer: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'silver'
   }
 })
 export default styles
