@@ -1,6 +1,7 @@
 const styles = ({
   loginContainer: {
-    gridArea: '2/1/4/4',
+    width: '100%',
+    height: '100%',
     display: 'flex',
     flexFlow: 'column wrap',
     justifyContent: 'center',

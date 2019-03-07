@@ -1,6 +1,7 @@
 const styles = ({
   position: {
-    gridArea: '2 / 1 / 4 / 4 ',
+    width: '100%',
+    height: '100%',
     backgroundColor: 'white',
     borderTop: '1px solid #ccc'
   },
@@ -13,7 +14,7 @@ const styles = ({
   },
   aboutMe: {
     grid: {
-      row: '1/3',
+      row: '1/span 2 ',
       column: '1/3'
     },
     display: 'flex',
@@ -28,7 +29,7 @@ const styles = ({
   },
   projectsPosition: {
     grid: {
-      row: '1/3',
+      row: '1/span2',
       column: '3/7'
     }
   },
