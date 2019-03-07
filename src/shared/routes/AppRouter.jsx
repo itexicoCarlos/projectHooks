@@ -29,7 +29,7 @@ const AppRouter = () => {
         <Suspense fallback={<Loading/>}>
           <App>
             <Header />
-            <Router>
+            <Router className='routerContainer' primary={false}>
               <Home path="/"/>
               <Login path="login"/>
               <About path="about"/>
