@@ -1,6 +1,6 @@
 import React from "react";
 // Routes
-import { NavLink as Link } from 'react-router-dom'
+import { Link } from '@reach/router'
 // Styles
 import classNames from 'classnames'
 import injectSheet from 'react-jss'
@@ -22,8 +22,8 @@ const Header = ({classes}) => {
         <span/>
         <nav>
           <ul className={classes.ulHeader}>
-            <li className={classes.liHeader}><Link activeStyle={{borderBottom: '1px solid silver'}} to='/login'>Login</Link></li>
-            <li className={classes.liHeader}><Link activeStyle={{borderBottom: '1px solid silver'}} to='/about'>About</Link></li>
+            <li className={classes.liHeader}><Link  to='/login'>Login</Link></li>
+            <li className={classes.liHeader}><Link  to='/about'>About</Link></li>
           </ul>
         </nav>
       </div>
